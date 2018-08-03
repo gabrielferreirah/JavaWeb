@@ -1,13 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package br.com.entra21java.bean;
 
 /**
- *
- * @author Alunos
+ * @author Gabriel de Oliveira Ferreira
  */
 public class AlimentoBean {
     
@@ -15,6 +9,7 @@ public class AlimentoBean {
     private String nome;
     private byte quantidade;
     private double preco;
+    private String descricao;
 
     public int getId() {
         return id;
@@ -47,4 +42,14 @@ public class AlimentoBean {
     public void setPreco(double preco) {
         this.preco = preco;
     }
+
+    public String getDescricao() {
+        return descricao;
+    }
+
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
+    }
+
+    
 }

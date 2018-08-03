@@ -12,7 +12,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- *
  * @author Gabriel de Oliveira Ferreira
  */
 @WebServlet(urlPatterns = "/alimentos")
@@ -23,49 +22,50 @@ public class AlimentoIndex extends HttpServlet {
 
         List<AlimentoBean> alimentos = new AlimentoDAO().obterTodos();
         PrintWriter out = resp.getWriter();
-        out.print("<!DOCTYPE html>");
-        out.print("<html>");
-        out.print("<head>");
-        out.print("<title>Alimento - Lista</title>");
-        out.print("</head>");
-        out.print("<body>");
-        out.print("");
-        out.print("<h3>Lista de Alimentos</h3>");
-        out.print("<table>");
-        out.print("<thead>");
-        out.print("<tr>");
-        out.print("<th>Código</th>");
-        out.print("<th>Nome</th>");
-        out.print("<th>Quantidade</th>");
-        out.print("<th>Preço</th>");
-        out.print("<th>Ação</th>");
-        out.print("</tr>");
-        out.print("</thead>");
-        out.print("<tbody>");
+        out.println("<!DOCTYPE html>");
+        out.println("<html>");
+        out.println("<head>");
+        out.println("<title>Alimento - Lista</title>");
+        out.println("<link rel='stylesheet' type'text/css' href='alimentos-index.css'>");
+        out.println("</head>");
+        out.println("<body>");
+        out.println("");
+        out.println("<h3>Lista de Alimentos</h3>");
+        out.println("<table>");
+        out.println("<thead>");
+        out.println("<tr>");
+        out.println("<th>Código</th>");
+        out.println("<th>Nome</th>");
+        out.println("<th>Quantidade</th>");
+        out.println("<th>Preço</th>");
+        out.println("<th>Ação</th>");
+        out.println("</tr>");
+        out.println("</thead>");
+        out.println("<tbody>");
 
         for (AlimentoBean alimento : alimentos) {
-            out.print("<tr>");
-            out.print("<td>"+alimento.getId()+"</td>");
-            out.print("<td>"+alimento.getNome()+"</td>");
-            out.print("<td>"+alimento.getQuantidade()+"</td>");
-            out.print("<td>"+alimento.getPreco()+"</td>");
-            out.print("<td></td>");
-            out.print("</tr>");
+            out.println("<tr>");
+            out.println("<td>"+alimento.getId()+"</td>");
+            out.println("<td>"+alimento.getNome()+"</td>");
+            out.println("<td>"+alimento.getQuantidade()+"</td>");
+            out.println("<td>"+alimento.getPreco()+"</td>");
+            out.println("<td></td>");
+            out.println("</tr>");
         }
 
-        out.print("</tbody>");
-        out.print("<tfoot>");
-        out.print("<tr>");
-        out.print("<th>Código</th>");
-        out.print("<th>Nome</th>");
-        out.print("<th>Quantidade</th>");
-        out.print("<th>Preço</th>");
-        out.print("<th>Ação</th>");
-        out.print("</tr>");
-        out.print("</tfoot>");
-        out.print("</table>");
-        out.print("</body>");
-        out.print("</html>");
+        out.println("</tbody>");
+        out.println("<tfoot>");
+        out.println("<tr>");
+        out.println("<th>Código</th>");
+        out.println("<th>Nome</th>");
+        out.println("<th>Quantidade</th>");
+        out.println("<th>Preço</th>");
+        out.println("<th>Ação</th>");
+        out.println("</tr>");
+        out.println("</tfoot>");
+        out.println("</table>");
+        out.println("</body>");
+        out.println("</html>");
     }
 
 }
