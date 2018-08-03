@@ -9,7 +9,8 @@ body{
 }
 
 table{
-    width: 100%;
+    width: 98.5%;
+    margin: 0 auto; 
 }
 
 table thead tr, table tfoot tr{
@@ -32,4 +33,30 @@ table tbody tr:nth-child(even){
 }
 table tbody tr:nth-child(odd){
     background-color: #6c757d;
+}
+
+.botao-cadastro {
+    display: block;
+    text-decoration: none;
+    width: 150px;
+    background-color: #6f42c1;
+    color: white;
+    height: 30px;
+    border-radius: 8px;
+    text-align: center;
+    line-height: 29px;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+    float: right;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+h3{
+    text-align: center;
+    color: #007bff;
+    font-size: 25px;
+    font-family: sans-serif;
+    
 }

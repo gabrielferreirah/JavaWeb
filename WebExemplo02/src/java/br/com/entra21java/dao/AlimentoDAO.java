@@ -60,4 +60,18 @@ public class AlimentoDAO {
         } return -1;
     }
     
+    public boolean excluir(int id) {
+        String sql = "DELETE FROM alimentos WHERE id = ?";
+        try {
+            PreparedStatement ps = Conexao.obterConexao().prepareStatement(sql);
+            ps.setInt(1, id);
+            return ps.executeUpdate() == 1;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }finally{
+            Conexao.fecharConexao();
+        }
+        return false;
+    }
+    
 }
