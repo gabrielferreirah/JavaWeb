@@ -9,6 +9,7 @@ CREATE TABLE alimentos(
 	quantidade SMALLINT,
 	descricao VARCHAR(100)
 );
+
 INSERT INTO alimentos(nome, preco, quantidade) VALUES
 ("maçã", 3, 10),
 ("calabresa", 30, 1),

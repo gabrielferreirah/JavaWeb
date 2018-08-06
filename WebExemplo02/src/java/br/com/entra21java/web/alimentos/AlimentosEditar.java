@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package br.com.entra21java.web.alimentos;
 
 import br.com.entra21java.bean.AlimentoBean;
@@ -33,7 +28,7 @@ public class AlimentosEditar extends HttpServlet {
         out.println("<title>Alimento - Editar</title>");
         out.println("</head>");
         out.println("<body>");
-        out.println("<form action='/alimentos/update' method='post'>");
+        out.println("<form action='/WebExemplo02/alimentos/update' method='post'>");
         out.println("<input type='hidden' name='id' value='"+alimento.getId()+"'>");
         out.println("<div>");
         out.println("<label for='campo-nome'>Nome</label>");

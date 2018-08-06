@@ -31,8 +31,12 @@ public class AlimentoStore extends HttpServlet{
         
         int codigo = new AlimentoDAO().adicionar(alimento);
         
-        PrintWriter out = resp.getWriter();
-        out.print("cadastrado com sucesso");
+        //PrintWriter out = resp.getWriter();
+        //out.print("cadastrado com sucesso");
+        
+        if (codigo > 0) {
+            resp.sendRedirect("/WebExemplo02/alimentos");
+        }
     }
     
     
