@@ -4,7 +4,7 @@ package br.com.entra21java.bean;
  * @author Gabriel de Oliveira Ferreira
  */
 public class AlimentoBean {
-    
+
     private int id;
     private String nome;
     private byte quantidade;
@@ -51,5 +51,4 @@ public class AlimentoBean {
         this.descricao = descricao;
     }
 
-    
 }

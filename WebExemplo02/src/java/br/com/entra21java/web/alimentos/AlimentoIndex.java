@@ -16,13 +16,13 @@ import javax.servlet.http.HttpServletResponse;
  */
 @WebServlet(urlPatterns = "/alimentos")
 public class AlimentoIndex extends HttpServlet {
-    
+
     private PrintWriter out;
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
         List<AlimentoBean> alimentos = new AlimentoDAO().obterTodos();
+        out = resp.getWriter();
         out.println("<!DOCTYPE html>");
         out.println("<html>");
         out.println("<head>");
@@ -34,27 +34,25 @@ public class AlimentoIndex extends HttpServlet {
         out.println("<div class='container-fluid'>");
         out.println("<div class='row'>");
         out.println("<div class='col-md-12'>");
-        out.println("<h3>Lista de Alimentos</h3>");
+        out.println("<h3 class='text-center'>Lista de Alimentos</h3>");
         out.println("</div>");
         out.println("</div>");
         out.println("<div class='row'>");
         out.println("<div class='col-md-2 offset-md-10'>");
-        out.println("<a href= '/WebExemplo02/alimentos/cadastro' class='btn btn-primary'><i class='fa fa-user'></i> Novo Alimento</a>");
+        out.println("<a href='/WebExemplo02/alimentos/cadastro' class='btn btn-primary float-right'><i class='fa fa-plus-square'></i> Novo Alimento</a>");
         out.println("</div>");
         out.println("</div>");
-        
         gerarTabela(alimentos);
-        
         out.println("</div>");
         out.println("</body>");
         out.println("</html>");
     }
 
     private void gerarTabela(List<AlimentoBean> alimentos) {
-        
+
         out.println("<div class='row mtx-3 justify-content-md-center'>");
         out.println("<div class='col-md-8'>");
-        
+
         out.println("<table class='table table-striped table-dark table-hover'>");
         out.println("<thead>");
         out.println("<tr class='table-primary'>");

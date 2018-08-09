@@ -17,7 +17,6 @@ public class AlimentoUpdate extends HttpServlet{
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        
         AlimentoBean alimento = new AlimentoBean();
         alimento.setNome(req.getParameter("nome"));
         alimento.setDescricao(req.getParameter("descricao"));
